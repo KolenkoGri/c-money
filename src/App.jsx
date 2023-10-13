@@ -1,5 +1,5 @@
 function App() {
-    return <div className="container">C-Money</div>;
+    return <div></div>;
 }
 
 export default App;

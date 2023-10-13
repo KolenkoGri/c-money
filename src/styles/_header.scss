@@ -1,0 +1,197 @@
+.header {
+    &__container {
+        flex-grow: 1;
+        padding-top: 20px;
+
+        // @media (min-width: 580px) {
+        //     padding: 0 29px;
+        // }
+
+        // @media (min-width: 820px) {
+        //     padding: 0 43px;
+        // }
+
+        // @media (min-width: 1120px) {
+        //     padding: 0 92px;
+        // }
+    }
+
+    &__main {
+        display: grid;
+        column-gap: 54px;
+        grid-template-columns: 1fr 455px;
+    }
+
+    &__block {
+        background-image: url("/img/background.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;
+        @media (min-width: 580px) {
+            background-image: url("/img/back768.svg");
+        }
+        @media (min-width: 820px) {
+            background-image: url("/img/back1024.svg");
+        }
+        // @media (min-width: 1120px) {
+        //     padding: 0 92px;
+        // }
+    }
+
+    &__navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        width: 139px;
+        height: 38px;
+    }
+
+    &__menu {
+        width: 18px;
+        height: 12px;
+        @media (min-width: 820px) {
+            display: none;
+        }
+    }
+    &__banner {
+        margin-bottom: 40px;
+        width: 100%;
+        display: flex;
+        justify-content: right;
+    }
+
+    &__img {
+        width: 290px;
+        height: 260px;
+        @media (min-width: 580px) {
+            width: 455px;
+            height: 407px;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        font-family: "Comfortaa";
+        font-size: 19px;
+        font-weight: 700;
+        line-height: 21px;
+        letter-spacing: 0em;
+        text-align: center;
+        margin-bottom: 10px;
+        @media (min-width: 580px) {
+            font-size: 40px;
+            line-height: 45px;
+        }
+    }
+    &__description {
+        margin-bottom: 30px;
+        font-family: Nunito;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0em;
+        text-align: center;
+        @media (min-width: 580px) {
+            font-size: 18px;
+            line-height: 23px;
+        }
+    }
+    &__button {
+        font-family: "Nunito";
+        font-weight: 700;
+        background: $color-gradient;
+        min-width: 290px;
+        height: 50px;
+        padding: 12px 30px 12px 30px;
+        border-radius: 10px;
+        color: $color-white;
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: 0em;
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+        @media (min-width: 580px) {
+            min-width: 380px;
+            height: 70px;
+            font-size: 18px;
+            line-height: 25px;
+        }
+    }
+
+    &__button:hover {
+        background: linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.1),
+                rgba(0, 0, 0, 0.1)
+            ),
+            linear-gradient(
+                87.4deg,
+                #2e00b1 -11.74%,
+                #8100bd 48.81%,
+                #a400be 113.27%
+            );
+    }
+
+    &__button:active {
+        background: linear-gradient(
+                87.4deg,
+                #2e00b1 -11.74%,
+                #8100bd 48.81%,
+                #a400be 113.27%
+            ),
+            linear-gradient(
+                0deg,
+                rgba(255, 255, 255, 0.2),
+                rgba(255, 255, 255, 0.2)
+            );
+    }
+
+    &__dropdown {
+        padding-top: 20px;
+        display: none;
+    }
+
+    &__drop-menu {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 36px;
+    }
+
+    &__menu--close {
+        width: 14px;
+        height: 14px;
+    }
+
+    &__list--dekstop {
+        display: none;
+        @media (min-width: 820px) {
+            display: flex;
+            justify-content: space-between;
+            row-gap: 20px;
+            flex-direction: row;
+            column-gap: 40px;
+            color: $color-white;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        @media (min-width: 820px) {
+            display: none;
+        }
+    }
+
+    &__item {
+        font-family: Nunito;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+}

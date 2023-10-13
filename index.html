@@ -4,6 +4,41 @@
         <meta charset="UTF-8" />
         <link rel="icon" type="image/svg+xml" href="/vite.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="fonts"
+            href="/fonts/nunito-v26-cyrillic_latin-regular.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+        />
+        <link
+            rel="fonts"
+            href="/fonts/nunito-v26-cyrillic_latin-700.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+        />
+        <link
+            rel="fonts"
+            href="/fonts/comfortaa-v45-cyrillic_latin-700.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+        />
+        <link
+            rel="fonts"
+            href="/fonts/inter-v13-cyrillic_latin-regular.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+        />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap"
+            rel="stylesheet"
+        />
         <link rel="stylesheet" href="src/style.scss" />
         <script type="module" src="/src/main.jsx"></script>
         <title>C-Money</title>
@@ -11,8 +46,67 @@
     <body>
         <div id="root"></div>
         <header class="header">
-            <div class="container">Hello World</div>
+            <div class="header__block">
+                <div class="container header__container">
+                    <nav class="header__navigation">
+                        <a class="header__logo">
+                            <img
+                                src="/img/logo.svg"
+                                alt="Логотип компании C-Money"
+                            />
+                        </a>
+                        <ul class="header__list--dekstop">
+                            <li class="header__item">Почему с нами выгодно?</li>
+                            <li class="header__item">Регистрация</li>
+                            <li class="header__item">Отзывы</li>
+                        </ul>
+                        <div class="header__menu">
+                            <img
+                                src="/img/Menu.svg"
+                                alt="Кнопка открытия меню"
+                            />
+                        </div>
+                    </nav>
+                    <div class="header__banner">
+                        <img
+                            class="header__img"
+                            src="/img/banner.svg"
+                            alt="Графическая демонстрация работы компании C-Money"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="container header__container">
+                <h1 class="header__title">Платформа C-Money</h1>
+                <h2 class="header__description">
+                    Удобная платформа для хранения счётов, перевода валюты
+                    и покупки криптовалюты
+                </h2>
+                <button class="header__button">Зарегистрироваться</button>
+                <div class="header__dropdown">
+                    <div class="header__drop-menu">
+                        <a class="header__logo">
+                            <img
+                                src="/img/logo.svg"
+                                alt="Логотип компании C-Money"
+                            />
+                        </a>
+                        <div class="header__menu--close">
+                            <img
+                                src="/img/Close.svg"
+                                alt="Кнопка открытия меню"
+                            />
+                        </div>
+                    </div>
+                    <ul class="header__list">
+                        <li class="header__item">Почему с нами выгодно?</li>
+                        <li class="header__item">Регистрация</li>
+                        <li class="header__item">Отзывы</li>
+                    </ul>
+                </div>
+            </div>
         </header>
+
         <main class="main">
             <div class="container"></div>
         </main>
