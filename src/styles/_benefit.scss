@@ -1,0 +1,140 @@
+.benefit {
+    margin-bottom: 60px;
+    @media (min-width: 580px) {
+        margin-bottom: 80px;
+    }
+    @media (min-width: 820px) {
+        margin-bottom: 90px;
+    }
+    &__title {
+        font-family: Comfortaa;
+        font-size: 19px;
+        font-weight: 700;
+        line-height: 21px;
+        letter-spacing: 0em;
+        text-align: left;
+        margin-bottom: 20px;
+        @media (min-width: 580px) {
+            font-size: 40px;
+            line-height: 45px;
+            max-width: 380px;
+        }
+        @media (min-width: 820px) {
+            margin-bottom: 40px;
+        }
+        @media (min-width: 1120px) {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-rows: min-content min-content min-content min-content;
+        row-gap: 20px;
+        @media (min-width: 580px) {
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+            row-gap: 40px;
+            column-gap: 66px;
+        }
+        @media (min-width: 820px) {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            column-gap: 18px;
+        }
+        @media (min-width: 1120px) {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            column-gap: 51px;
+        }
+    }
+
+    &__block {
+        display: grid;
+        column-gap: 11px;
+        row-gap: 6px;
+        grid-template-columns: min-content 1fr;
+        grid-template-rows: min-content 1fr;
+    }
+
+    &__icon {
+        width: 24px;
+        height: 24px;
+        background-repeat: no-repeat;
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    &__icon-static {
+        background-image: url("/icon/static.svg");
+    }
+
+    &__name {
+        font-family: Nunito;
+        font-size: 17px;
+        font-weight: 600;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: left;
+        grid-column: 2/3;
+        grid-row: 1/2;
+        @media (min-width: 580px) {
+            font-size: 24px;
+            line-height: 29px;
+        }
+
+        @media (min-width: 1120px) {
+            font-size: 30px;
+            line-height: 36px;
+        }
+    }
+
+    &__desciption {
+        font-family: Nunito;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: 0em;
+        text-align: left;
+        grid-column: 2/3;
+        grid-row: 2/3;
+        border-bottom: 2px solid #ff0000;
+        background-image: $color-gradient;
+        background-size: 200px 2px;
+        background-position: 0 100%;
+        background-repeat: no-repeat;
+        border-image: $color-gradient;
+        padding-bottom: 10px;
+        max-width: 220px;
+
+        @media (min-width: 580px) {
+            font-size: 18px;
+            line-height: 23px;
+            padding-bottom: 15px;
+        }
+
+        @media (min-width: 1120px) {
+            font-size: 18px;
+            line-height: 23px;
+            background-size: 215px 2px;
+            max-width: 257px;
+        }
+    }
+
+    &__icon-reliability {
+        background-image: url("/icon/reliability.svg");
+        width: 24px;
+        height: 31px;
+    }
+
+    &__icon-change {
+        background-image: url("/icon/change.svg");
+        width: 24px;
+        height: 33px;
+    }
+
+    &__icon-convenience {
+        background-image: url("/icon/convenience.svg");
+        width: 30px;
+        height: 30px;
+    }
+}

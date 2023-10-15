@@ -41,12 +41,19 @@
         />
         <link rel="stylesheet" href="src/style.scss" />
         <script type="module" src="/src/main.jsx"></script>
+        <script type="module" src="/src/modules/slider.js"></script>
+        <script type="module" src="/src/modules/mapYandex.js"></script>
+
+        <script
+            src="https://api-maps.yandex.ru/2.1/?apikey=267986a7-207b-4205-a6d9-478423079e11&lang=ru_RU"
+            type="text/javascript"
+        ></script>
         <title>C-Money</title>
     </head>
     <body>
         <div id="root"></div>
         <header class="header">
-            <div class="header__block">
+            <div class="header__all">
                 <div class="container header__container">
                     <nav class="header__navigation">
                         <a class="header__logo">
@@ -74,44 +81,218 @@
                             alt="Графическая демонстрация работы компании C-Money"
                         />
                     </div>
-                </div>
-            </div>
-            <div class="container header__container">
-                <h1 class="header__title">Платформа C-Money</h1>
-                <h2 class="header__description">
-                    Удобная платформа для хранения счётов, перевода валюты
-                    и покупки криптовалюты
-                </h2>
-                <button class="header__button">Зарегистрироваться</button>
-                <div class="header__dropdown">
-                    <div class="header__drop-menu">
-                        <a class="header__logo">
-                            <img
-                                src="/img/logo.svg"
-                                alt="Логотип компании C-Money"
-                            />
-                        </a>
-                        <div class="header__menu--close">
-                            <img
-                                src="/img/Close.svg"
-                                alt="Кнопка открытия меню"
-                            />
+                    <div class="header__callback">
+                        <h1 class="header__title">Платформа C-Money</h1>
+                        <h2 class="header__description">
+                            Удобная платформа для хранения счётов, перевода
+                            валюты и покупки криптовалюты
+                        </h2>
+                        <button class="header__button">
+                            Зарегистрироваться
+                        </button>
+                        <div class="header__dropdown">
+                            <div class="header__drop-menu">
+                                <a class="header__logo">
+                                    <img
+                                        src="/img/logo.svg"
+                                        alt="Логотип компании C-Money"
+                                    />
+                                </a>
+                                <div class="header__menu--close">
+                                    <img
+                                        src="/img/Close.svg"
+                                        alt="Кнопка открытия меню"
+                                    />
+                                </div>
+                            </div>
+                            <ul class="header__list">
+                                <li class="header__item">
+                                    Почему с нами выгодно?
+                                </li>
+                                <li class="header__item">Регистрация</li>
+                                <li class="header__item">Отзывы</li>
+                            </ul>
                         </div>
                     </div>
-                    <ul class="header__list">
-                        <li class="header__item">Почему с нами выгодно?</li>
-                        <li class="header__item">Регистрация</li>
-                        <li class="header__item">Отзывы</li>
-                    </ul>
                 </div>
             </div>
         </header>
 
         <main class="main">
-            <div class="container"></div>
+            <section class="benefit">
+                <div class="container">
+                    <h2 class="benefit__title">Почему с нами выгодно?</h2>
+                    <ul class="benefit__list">
+                        <li class="benefit__block">
+                            <div
+                                class="benefit__icon benefit__icon-static"
+                            ></div>
+                            <h3 class="benefit__name">Статистика</h3>
+                            <div class="benefit__desciption">
+                                можно быстро отследить статистику доходов
+                                и расходов
+                            </div>
+                            <div class="benefit__line"></div>
+                        </li>
+                        <li class="benefit__block">
+                            <div
+                                class="benefit__icon benefit__icon-reliability"
+                            ></div>
+                            <h3 class="benefit__name">Надёжность</h3>
+                            <div class="benefit__desciption">
+                                с нами ваши счета в безопасности
+                            </div>
+                            <div class="benefit__line"></div>
+                        </li>
+                        <li class="benefit__block">
+                            <div
+                                class="benefit__icon benefit__icon-change"
+                            ></div>
+                            <h3 class="benefit__name">Обмен валюты</h3>
+                            <div class="benefit__desciption">
+                                обмен валюты по самому выгодному курсу
+                            </div>
+                            <div class="benefit__line"></div>
+                        </li>
+                        <li class="benefit__block">
+                            <div
+                                class="benefit__icon benefit__icon-convenience"
+                            ></div>
+                            <h3 class="benefit__name">Удобство</h3>
+                            <div class="benefit__desciption">
+                                удобная платформа для отслежки счётов
+                            </div>
+                            <div class="benefit__line"></div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="registry">
+                <div class="container">
+                    <h2 class="registry__title">
+                        Как зарегистрироваться на платформе
+                    </h2>
+                    <div class="registry__description">
+                        Пошагово заполните все поля формы
+                    </div>
+                    <div class="registry__radio">
+                        <div class="registry__circle registry__circle--active">
+                            1
+                        </div>
+                        <div class="registry__circle">2</div>
+                        <div class="registry__circle">3</div>
+                    </div>
+
+                    <form class="registry__form" action="">
+                        <label
+                            class="registry__point registry__point--name"
+                            for=""
+                            >Имя
+                            <input class="registry__input" type="text" />
+                        </label>
+                        <label
+                            class="registry__point registry__point--surname"
+                            for=""
+                            >Фамилия
+                            <input class="registry__input" type="text" />
+                        </label>
+                        <label
+                            class="registry__point registry__point--patronymic"
+                            for=""
+                            >Отчество
+                            <input class="registry__input" type="text" />
+                        </label>
+                        <button class="registry__submit">Далее</button>
+                    </form>
+                </div>
+            </section>
+            <section class="reviews">
+                <div class="container">
+                    <div class="reviews__title">Отзывы наших клиентов</div>
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="swiper-slider">
+                                    <div
+                                        class="swiper__photo swiper__photo--one"
+                                    ></div>
+                                    <div class="swiper__name">Юлия С</div>
+                                    <div class="swiper__review">
+                                        «Очень удобная платформа для открытия
+                                        мультивалютных счётов»
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper-slider">
+                                    <div
+                                        class="swiper__photo swiper__photo--two"
+                                    ></div>
+                                    <div class="swiper__name">Светлана Н</div>
+                                    <div class="swiper__review">
+                                        «Пользуюсь платформой уже больше года,
+                                        нравится, что можно быстро менять валюту
+                                        по выгодному курсу»
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper-slider">
+                                    <div
+                                        class="swiper__photo swiper__photo--three"
+                                    ></div>
+                                    <div class="swiper__name">Сергей А</div>
+                                    <div class="swiper__review">
+                                        «Открыл счёт в биткоинах, могу быстро
+                                        следить за курсом и делать обмен»
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper-slider">
+                                    <div
+                                        class="swiper__photo swiper__photo--two"
+                                    ></div>
+                                    <div class="swiper__name">Светлана Н</div>
+                                    <div class="swiper__review">
+                                        «Пользуюсь платформой уже больше года,
+                                        нравится, что можно быстро менять валюту
+                                        по выгодному курсу»
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </section>
         </main>
         <footer class="footer">
-            <div class="container"></div>
+            <div class="container footer__container">
+                <div class="footer__logo"></div>
+                <ul class="footer__navigation">
+                    <li class="footer__link">О компании</li>
+                    <li class="footer__link">Отзывы</li>
+                    <li class="footer__link">Регистрация</li>
+                    <li class="footer__link">Почему с нами выгодно?</li>
+                </ul>
+                <ul class="footer__contacts">
+                    <li class="footer__link">Контакты:</li>
+                    <li class="footer__link">+7 921 347-49-97</li>
+                    <li class="footer__link">C-Money@gmail.com</li>
+                    <li class="footer__link">
+                        г. Москва ул. Новослободская 120/2 54
+                    </li>
+                </ul>
+                <ul class="footer__social">
+                    <li class="footer__icon footer__icon--telega"></li>
+                    <li class="footer__icon footer__icon--twitter"></li>
+                </ul>
+                <div class="footer__map" id="map"></div>
+                <div class="footer__copyright">© C-Money, 2022</div>
+            </div>
         </footer>
     </body>
 </html>
