@@ -39,11 +39,8 @@
             href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="src/style.scss" />
-        <script type="module" src="/src/main.jsx"></script>
-        <script type="module" src="/src/modules/slider.js"></script>
-        <script type="module" src="/src/modules/mapYandex.js"></script>
-
+        <link rel="stylesheet" href="src/styles/style.scss" />
+        <script type="module" src="/src/modules/index.js"></script>
         <script
             src="https://api-maps.yandex.ru/2.1/?apikey=267986a7-207b-4205-a6d9-478423079e11&lang=ru_RU"
             type="text/javascript"
@@ -51,7 +48,6 @@
         <title>C-Money</title>
     </head>
     <body>
-        <div id="root"></div>
         <header class="header">
             <div class="header__all">
                 <div class="container header__container">
@@ -63,9 +59,15 @@
                             />
                         </a>
                         <ul class="header__list--dekstop">
-                            <li class="header__item">Почему с нами выгодно?</li>
-                            <li class="header__item">Регистрация</li>
-                            <li class="header__item">Отзывы</li>
+                            <li class="header__item">
+                                <a href="#benefit"> Почему с нами выгодно? </a>
+                            </li>
+                            <li class="header__item">
+                                <a href="#registry">Регистрация</a>
+                            </li>
+                            <li class="header__item">
+                                <a href="#reviews">Отзывы</a>
+                            </li>
                         </ul>
                         <div class="header__menu">
                             <img
@@ -88,9 +90,9 @@
                             валюты и покупки криптовалюты
                         </h2>
                         <button class="header__button">
-                            Зарегистрироваться
+                            <a href="#registry">Зарегистрироваться</a>
                         </button>
-                        <div class="header__dropdown">
+                        <div class="header__dropdown visually-hidden">
                             <div class="header__drop-menu">
                                 <a class="header__logo">
                                     <img
@@ -107,10 +109,16 @@
                             </div>
                             <ul class="header__list">
                                 <li class="header__item">
-                                    Почему с нами выгодно?
+                                    <a href="#benefit">
+                                        Почему с нами выгодно?
+                                    </a>
                                 </li>
-                                <li class="header__item">Регистрация</li>
-                                <li class="header__item">Отзывы</li>
+                                <li class="header__item">
+                                    <a href="#registry">Регистрация</a>
+                                </li>
+                                <li class="header__item">
+                                    <a href="#reviews">Отзывы</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -119,7 +127,7 @@
         </header>
 
         <main class="main">
-            <section class="benefit">
+            <section class="benefit" id="benefit">
                 <div class="container">
                     <h2 class="benefit__title">Почему с нами выгодно?</h2>
                     <ul class="benefit__list">
@@ -167,8 +175,8 @@
                     </ul>
                 </div>
             </section>
-            <section class="registry">
-                <div class="container">
+            <section class="registry" id="registry">
+                <div class="container registry__container">
                     <h2 class="registry__title">
                         Как зарегистрироваться на платформе
                     </h2>
@@ -183,30 +191,144 @@
                         <div class="registry__circle">3</div>
                     </div>
 
-                    <form class="registry__form" action="">
-                        <label
-                            class="registry__point registry__point--name"
-                            for=""
-                            >Имя
-                            <input class="registry__input" type="text" />
-                        </label>
-                        <label
-                            class="registry__point registry__point--surname"
-                            for=""
-                            >Фамилия
-                            <input class="registry__input" type="text" />
-                        </label>
-                        <label
-                            class="registry__point registry__point--patronymic"
-                            for=""
-                            >Отчество
-                            <input class="registry__input" type="text" />
-                        </label>
-                        <button class="registry__submit">Далее</button>
+                    <form
+                        class="registry__form"
+                        action="https://jsonplaceholder.typicode.com/posts"
+                        method="post"
+                        name="form"
+                    >
+                        <div class="registry__page registry__page--one">
+                            <label
+                                class="registry__point registry__point--name"
+                                for="name"
+                                >Имя
+                                <input
+                                    class="registry__input"
+                                    type="text"
+                                    name="name"
+                                    required
+                                />
+                            </label>
+                            <label
+                                class="registry__point registry__point--surname"
+                                for="surname"
+                                >Фамилия
+                                <input
+                                    class="registry__input"
+                                    type="text"
+                                    name="surname"
+                                    required
+                                />
+                            </label>
+                            <label
+                                class="registry__point registry__point--patronymic"
+                                for="patronymic"
+                                >Отчество
+                                <input
+                                    class="registry__input"
+                                    type="text"
+                                    name="patronymic"
+                                    required
+                                />
+                            </label>
+                            <button class="registry__submit" type="button">
+                                Далее
+                            </button>
+                        </div>
+                        <div
+                            class="registry__page registry__page--two visually-hidden"
+                        >
+                            <label
+                                class="registry__point registry__point--tel"
+                                for="tel"
+                                >Телефон
+                                <input
+                                    class="registry__input"
+                                    type="tel"
+                                    name="tel"
+                                    required
+                                />
+                            </label>
+                            <label
+                                class="registry__point registry__point--email"
+                                for="email"
+                                >Электронная почта
+                                <input
+                                    class="registry__input"
+                                    type="email"
+                                    name="email"
+                                    required
+                                />
+                            </label>
+                            <button
+                                class="registry__submit registry__submit--two"
+                                type="button"
+                            >
+                                Далее
+                            </button>
+                        </div>
+                        <div
+                            class="registry__page registry__page--three visually-hidden"
+                        >
+                            <label
+                                class="registry__point registry__point--login"
+                                for="login"
+                                >Придумайте логин
+                                <input
+                                    class="registry__input"
+                                    type="text"
+                                    name="login"
+                                    required
+                                />
+                            </label>
+                            <label
+                                class="registry__point registry__point--password"
+                                for="password"
+                                >Придумайте пароль
+                                <input
+                                    class="registry__input"
+                                    type="password"
+                                    name="password"
+                                    required
+                                />
+                            </label>
+                            <label
+                                class="registry__point registry__point--pass-repeat"
+                                for="password_repeat"
+                                >Повторите пароль
+                                <input
+                                    class="registry__input"
+                                    type="password"
+                                    name="password_repeat"
+                                    required
+                                />
+                            </label>
+                            <button
+                                class="registry__submit registry__submit--finish"
+                                type="submit"
+                                formtarget="_blank"
+                            >
+                                Зарегистрироваться
+                            </button>
+                            <label for="agree" class="registry__agree">
+                                <input
+                                    type="checkbox"
+                                    id="agree"
+                                    name="agree"
+                                    value="agree"
+                                    form="form"
+                                    checked
+                                    required
+                                />
+                                By clicking on the button, I consent to the
+                                processing of personal data and agree to the
+                                privacy policy
+                            </label>
+                        </div>
                     </form>
                 </div>
             </section>
-            <section class="reviews">
+            <section class="reviews" id="reviews">
                 <div class="container">
                     <div class="reviews__title">Отзывы наших клиентов</div>
                     <div class="swiper">
@@ -291,7 +413,7 @@
                     <li class="footer__icon footer__icon--twitter"></li>
                 </ul>
                 <div class="footer__map" id="map"></div>
-                <div class="footer__copyright">© C-Money, 2022</div>
+                <div class="footer__copyright">© C-Money, 2023</div>
             </div>
         </footer>
     </body>

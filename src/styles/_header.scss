@@ -1,5 +1,6 @@
 .header {
     margin-bottom: 60px;
+    position: relative;
     @media (min-width: 580px) {
         margin-bottom: 80px;
     }
@@ -193,7 +194,16 @@
 
     &__dropdown {
         padding-top: 20px;
-        display: none;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: $color-white;
+        transition: 0.3s;
+        padding-left: 15px;
+        @media (min-width: 580px) {
+            padding-left: 94px;
+        }
     }
 
     &__drop-menu {
@@ -205,6 +215,12 @@
     &__menu--close {
         width: 14px;
         height: 14px;
+        position: absolute;
+        right: 30px;
+        top: 32px;
+        @media (min-width: 580px) {
+            right: 99px;
+        }
     }
 
     &__list--dekstop {
@@ -223,6 +239,7 @@
         display: flex;
         flex-direction: column;
         row-gap: 20px;
+        margin-bottom: 34px;
         @media (min-width: 820px) {
             display: none;
         }

@@ -1,6 +1,7 @@
 .registry {
     background-color: #eee2fa;
     padding-top: 60px;
+    padding-bottom: 53px;
 
     &__title {
         font-family: Comfortaa;
@@ -73,6 +74,7 @@
         justify-content: center;
         align-items: center;
         color: #c6b6d7;
+        cursor: pointer;
         @media (min-width: 580px) {
             width: 50px;
             height: 50px;
@@ -84,9 +86,10 @@
     &__circle--active {
         color: #6e479e;
         border-color: #6e479e;
+        cursor: default;
     }
 
-    &__form {
+    &__page {
         display: grid;
         row-gap: 10px;
         @media (min-width: 820px) {
@@ -150,6 +153,76 @@
         @media (min-width: 820px) {
             grid-column: 3/4;
             grid-row: 2/3;
+        }
+    }
+
+    &__submit--two {
+        @media (min-width: 820px) {
+            height: 70px;
+            grid-column: 3/4;
+            grid-row: 1/2;
+            margin-bottom: 0;
+            align-self: self-end;
+        }
+    }
+
+    &__agree {
+        grid-row: 4/5;
+        @media (min-width: 820px) {
+            grid-column: 3/4;
+            grid-row: 2/3;
+            align-self: self-end;
+        }
+    }
+
+    &__success {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 30px;
+        background-color: $color-white;
+        width: 100%;
+        padding-top: 66px;
+        @media (min-width: 1120px) {
+            margin: 0 auto;
+            margin-top: 68px;
+            max-width: 1180px;
+        }
+    }
+
+    &__check-img {
+        background-image: url("/icon/Check.svg");
+        background-repeat: no-repeat;
+        width: 54px;
+        height: 54px;
+        background-size: contain;
+    }
+    &__text {
+        font-family: Nunito;
+        font-size: 17px;
+        font-weight: 600;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: center;
+        @media (min-width: 1120px) {
+            font-size: 30px;
+            line-height: 36px;
+            max-width: 600px;
+        }
+    }
+    &__text-description {
+        font-family: Nunito;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: 0em;
+        text-align: center;
+        margin-bottom: 86px;
+        @media (min-width: 1120px) {
+            font-size: 18px;
+            line-height: 23px;
+            max-width: 600px;
         }
     }
 }

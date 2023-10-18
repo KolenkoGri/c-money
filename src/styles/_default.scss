@@ -1,6 +1,7 @@
 html {
     position: relative;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 *,
@@ -85,6 +86,6 @@ fieldset {
     }
 
     @media (min-width: 1120px) {
-        padding: 0 92px;
+        padding: 0 130px;
     }
 }
